@@ -1,14 +1,7 @@
 package day9;
-
-import java.util.Scanner;
-
 public class Bmi {
-	public void Bmi() {
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("몸무게를 입력하세요");
-		double w = scanner.nextDouble();
-		System.out.println("키를 입력하세요");
-		double t = scanner.nextDouble();
+	public String Bmi(double w,double t) {
+		
 		double bmi = w/((t*t)/10000);
 		String res = "";
 		if(bmi>=40) {
@@ -24,7 +17,6 @@ public class Bmi {
 		}else {
 			res ="저체중";
 		}
-		System.out.println(bmi+"\n"
-				+res);
+		return bmi+"\n"+res;
 	}
 }
